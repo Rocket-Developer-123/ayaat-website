@@ -1,10 +1,9 @@
-/* Styling variables */
 :root {
-    --bg-color: #0b0e14;
+    --bg-color: #0d1117;
     --card-bg: #161b22;
-    --accent-primary: #bb86fc; 
-    --accent-secondary: #03dac6; 
-    --text-main: #e6edf3;
+    --accent-anime: #ff4d4d; /* Red for AoT vibes */
+    --accent-kdrama: #bb86fc; /* Purple for K-Drama vibes */
+    --text-main: #f0f6fc;
     --text-dim: #8b949e;
 }
 
@@ -15,7 +14,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-main);
     line-height: 1.8;
@@ -27,80 +26,63 @@ body {
     padding: 20px;
 }
 
-/* Header */
 header {
     text-align: center;
-    padding: 60px 20px;
+    padding: 50px 20px;
 }
 
 header h1 {
     font-size: 3.5rem;
-    letter-spacing: 5px;
-    color: var(--accent-primary);
-    text-transform: uppercase;
-}
-
-.subtitle {
-    color: var(--accent-secondary);
-    font-weight: 300;
-    letter-spacing: 2px;
-    margin-bottom: 30px; /* Space for the image */
-}
-
-/* --- RESPONSIVE HERO IMAGE --- */
-.hero-image-container {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
+    color: var(--accent-kdrama);
+    text-shadow: 0 0 10px rgba(187, 134, 252, 0.5);
 }
 
 .hero-img {
-    /* Desktop size */
-    width: 280px; 
-    height: 280px;
-    
-    /* Makes it circular and aesthetic */
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid var(--accent-primary);
-    box-shadow: 0 0 20px rgba(187, 134, 252, 0.3);
-    
-    /* MOBILE RESPONSIVENESS */
-    max-width: 80%; /* Shrinks on small screens */
-    height: auto;   /* Keeps aspect ratio */
+    border: 4px solid var(--accent-kdrama);
+    margin-top: 20px;
+    /* This makes it responsive */
+    max-width: 100%;
+    height: auto;
 }
 
-/* Card Styles */
 .card {
     background: var(--card-bg);
     padding: 30px;
-    border-radius: 15px;
-    margin-bottom: 30px;
+    border-radius: 12px;
+    margin-bottom: 25px;
     border: 1px solid #30363d;
 }
 
 h2 {
-    color: var(--accent-secondary);
-    margin-bottom: 20px;
+    color: var(--accent-kdrama);
+    margin-bottom: 15px;
 }
 
-/* Hobby Grid */
+.anime-section h2 {
+    color: var(--accent-anime); /* Red accent for the Anime section */
+}
+
 .hobby-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
 .hobby-card {
-    background: #1c2128;
+    background: #0d1117;
     padding: 20px;
-    border-radius: 10px;
-    border-left: 3px solid var(--accent-primary);
+    border-radius: 8px;
+    border: 1px solid #30363d;
 }
 
 .phone a {
-    color: var(--accent-primary);
+    color: var(--accent-kdrama);
     text-decoration: none;
+    font-size: 1.3rem;
     font-weight: bold;
 }
 
@@ -110,10 +92,8 @@ footer {
     color: var(--text-dim);
 }
 
-/* Media Query for Phones */
+/* Responsive adjustment for phones */
 @media (max-width: 600px) {
-    header h1 { font-size: 2.2rem; }
-    .hero-img {
-        width: 200px; /* Smaller on mobile */
-    }
+    header h1 { font-size: 2.5rem; }
+    .card { padding: 20px; }
 }
