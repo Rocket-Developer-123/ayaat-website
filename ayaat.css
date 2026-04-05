@@ -1,0 +1,119 @@
+/* Styling variables */
+:root {
+    --bg-color: #0b0e14;
+    --card-bg: #161b22;
+    --accent-primary: #bb86fc; 
+    --accent-secondary: #03dac6; 
+    --text-main: #e6edf3;
+    --text-dim: #8b949e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.8;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    letter-spacing: 5px;
+    color: var(--accent-primary);
+    text-transform: uppercase;
+}
+
+.subtitle {
+    color: var(--accent-secondary);
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 30px; /* Space for the image */
+}
+
+/* --- RESPONSIVE HERO IMAGE --- */
+.hero-image-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-img {
+    /* Desktop size */
+    width: 280px; 
+    height: 280px;
+    
+    /* Makes it circular and aesthetic */
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--accent-primary);
+    box-shadow: 0 0 20px rgba(187, 134, 252, 0.3);
+    
+    /* MOBILE RESPONSIVENESS */
+    max-width: 80%; /* Shrinks on small screens */
+    height: auto;   /* Keeps aspect ratio */
+}
+
+/* Card Styles */
+.card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    border: 1px solid #30363d;
+}
+
+h2 {
+    color: var(--accent-secondary);
+    margin-bottom: 20px;
+}
+
+/* Hobby Grid */
+.hobby-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.hobby-card {
+    background: #1c2128;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 3px solid var(--accent-primary);
+}
+
+.phone a {
+    color: var(--accent-primary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-dim);
+}
+
+/* Media Query for Phones */
+@media (max-width: 600px) {
+    header h1 { font-size: 2.2rem; }
+    .hero-img {
+        width: 200px; /* Smaller on mobile */
+    }
+}
